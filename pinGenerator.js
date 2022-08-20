@@ -60,11 +60,11 @@ document.getElementById('submitBtn').addEventListener('click', function () {
         let triesLeft = chancesLeft.innerText;
         let triesLeftNumber = parseInt(triesLeft);
         let chanceLeft = triesLeftNumber - 1;
-        chancesLeft.innerText = chanceLeft;
-        if (chanceLeft == 0) {
-            alert('Access blocked');
+        if (chanceLeft <= -1) {
+            alert('access blocked');
             return;
         };
+        chancesLeft.innerText = chanceLeft;
         document.getElementById('incorrectPin').style.display = 'block';
     }
 })
